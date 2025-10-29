@@ -1,5 +1,6 @@
 import { ArrowRight, Mail, Sparkles } from "lucide-react";
 import { useState } from "react";
+import heroImage from "../assets/hero-image.jpg";
 
 export const HeroSection = () => {
   const [email, setEmail] = useState("");
@@ -7,7 +8,6 @@ export const HeroSection = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Here you would typically send to a waitlist service
     setIsSubmitted(true);
     setTimeout(() => setIsSubmitted(false), 3000);
   };
@@ -15,12 +15,14 @@ export const HeroSection = () => {
   return (
     <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
       {/* Animated Background linear */}
-      <div className="absolute inset-0 bg-linear-to-br from-blue-50 via-cyan-50 to-teal-50 dark:from-blue-950/20 dark:via-cyan-950/20 dark:to-teal-950/20 animate-linear-shift"></div>
+      <div className="absolute inset-0">
+      <img src={heroImage} alt="" />
+      </div>
       
       {/* Animated Orbs */}
-      <div className="absolute top-20 left-10 w-72 h-72 bg-blue-400/20 rounded-full blur-3xl animate-float"></div>
+      {/* <div className="absolute top-20 left-10 w-72 h-72 bg-blue-400/20 rounded-full blur-3xl animate-float"></div>
       <div className="absolute bottom-20 right-10 w-96 h-96 bg-cyan-400/20 rounded-full blur-3xl animate-float-delayed"></div>
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-teal-400/10 rounded-full blur-3xl animate-pulse-slow"></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-teal-400/10 rounded-full blur-3xl animate-pulse-slow"></div> */}
 
       <div className="container mx-auto relative z-10">
         <div className="max-w-4xl mx-auto text-center">
@@ -31,7 +33,7 @@ export const HeroSection = () => {
           </div>
 
           {/* Main Heading with Stagger Animation */}
-          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-6 leading-tight animate-fade-in-up animation-delay-100">
+          <h1 className="text-4xl sm:text-5xl lg:text-7xl bg-linear-to-r from-white rounded-2xl pb-2 font-bold mb-6 leading-tight animate-fade-in-up animation-delay-100">
             Healthcare Discovery
             <br />
             <span className="bg-linear-to-r from-blue-600 via-cyan-500 to-teal-500 bg-clip-text text-transparent animate-linear-text">
@@ -40,9 +42,9 @@ export const HeroSection = () => {
           </h1>
 
           {/* Subheading */}
-          <p className="text-lg sm:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto animate-fade-in-up animation-delay-200">
+          <p className="text-lg sm:text-xl bg-clip-text bg-linear-to-r from-white to-black mb-10 max-w-2xl mx-auto animate-fade-in-up animation-delay-200">
             The future of healthcare is here. Find hospitals, compare prices, book appointments, 
-            and read real reviews—all in one revolutionary platform.
+            and read real reviews
           </p>
 
           {/* Waitlist Form */}
@@ -75,9 +77,7 @@ export const HeroSection = () => {
                 </button>
               </div>
             </form>
-            <p className="text-sm text-muted-foreground mt-4">
-              🎁 Early access + exclusive perks for first 1,000 members
-            </p>
+            
           </div>
 
           {/* Animated Stats */}
@@ -93,7 +93,7 @@ export const HeroSection = () => {
                 <div className="text-3xl sm:text-4xl font-bold bg-linear-to-r from-blue-600 via-cyan-600 to-teal-600 bg-clip-text text-transparent">
                   {stat.value}
                 </div>
-                <div className="text-sm text-muted-foreground mt-1">{stat.label}</div>
+                <div className="text-sm text-white mt-1">{stat.label}</div>
               </div>
             ))}
           </div>

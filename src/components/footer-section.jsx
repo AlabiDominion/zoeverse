@@ -1,5 +1,6 @@
 import { Heart, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
-
+import zoeverseLogo from "../assets/zoeverse-logo-png.png";
+import { Link } from "react-router-dom";
 export const Footer = () => {
   const footerLinks = {
     product: [
@@ -35,14 +36,17 @@ export const Footer = () => {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 mb-12">
           {/* Brand Column */}
           <div className="col-span-2">
-            <a href="/" className="flex items-center gap-2 mb-4">
-              <div className="bg-gradient-to-br from-blue-500 to-cyan-500 p-2 rounded-lg">
-                <Heart className="w-6 h-6 text-white" aria-hidden="true" />
-              </div>
-              <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
-                HealthFinder
-              </span>
-            </a>
+            <Link href="/" className="flex items-center gap-2 group">
+            <img 
+            src={zoeverseLogo} 
+            alt=""
+            className="w-10 h-9" 
+            />
+            
+            <span className="text-xl font-bold bg-linear-to-r from-[#e15258] via-[#feaf1c] to-[#77c243] bg-clip-text text-transparent">
+              ZOEVERSE
+            </span>
+          </Link>
 
             <p className="text-muted-foreground mb-6 max-w-sm">
               Making healthcare accessible and transparent for everyone. Find, compare, and book quality healthcare near you.

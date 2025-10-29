@@ -19,7 +19,7 @@ export const Navigation = () => {
             className="w-8 h-7" 
             />
             
-            <span className="text-xl font-bold bg-linear-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
+            <span className="text-xl font-bold bg-linear-to-r from-[#e15258] via-[#feaf1c] to-[#77c243] bg-clip-text text-transparent">
               ZOEVERSE
             </span>
           </Link>
