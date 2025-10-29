@@ -109,7 +109,7 @@ export const TestimonialsSection = () => {
         </div>
 
         {/* Social Proof */}
-        <div className="mt-16 text-center animate-fade-in-up animation-delay-600">
+        {/* <div className="mt-16 text-center animate-fade-in-up animation-delay-600">
           <div className="inline-flex items-center gap-8 px-8 py-6 bg-linear-to-r from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20 rounded-2xl border border-blue-200/50 dark:border-blue-800/50">
             <div>
               <div className="text-3xl font-bold bg-linear-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">10,000+</div>
@@ -126,7 +126,7 @@ export const TestimonialsSection = () => {
               <div className="text-sm text-muted-foreground">Hospitals Ready</div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
