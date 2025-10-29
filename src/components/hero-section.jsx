@@ -82,15 +82,15 @@ export const HeroSection = () => {
 
           {/* Animated Stats */}
           
-          <div className="mt-16 grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-3xl mx-auto">
+          <div className="mt-16 grid grid-cols-2 gap-6 max-w-3xl mx-auto">
             {[
-              { value: "", label: "" },
+              
               { value: "100%", label: "Transparent" },
               { value: "Launch", label: "Q2 2026" },
-              { value: "", label: "" }
+              
             ].map((stat, index) => (
               <div key={index} className="text-center animate-fade-in-up group hover:scale-110 transition-transform" style={{ animationDelay: `${400 + index * 100}ms` }}>
-                <div className="text-3xl sm:text-4xl font-bold bg-linear-to-r from-blue-600 via-cyan-600 to-teal-600 bg-clip-text text-transparent">
+                <div className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-blue-600 via-cyan-600 to-teal-600 bg-clip-text text-transparent">
                   {stat.value}
                 </div>
                 <div className="text-sm text-white mt-1">{stat.label}</div>
