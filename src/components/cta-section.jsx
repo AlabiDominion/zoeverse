@@ -7,6 +7,13 @@ export const CTASection = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!email) return;
+
+    const to = "hello@zoeverse.org";
+    const subject = encodeURIComponent("Waitlist signup");
+    const body = encodeURIComponent(`Please add this user to the waitlist:\n\nEmail: ${email}\nSource: Healthcare Discovery waitlist`);
+    window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+
     setIsSubmitted(true);
     setTimeout(() => setIsSubmitted(false), 3000);
   };

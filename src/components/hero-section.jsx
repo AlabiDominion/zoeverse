@@ -8,9 +8,17 @@ export const HeroSection = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!email) return;
+
+    const to = "hello@zoeverse.org";
+    const subject = encodeURIComponent("Waitlist signup");
+    const body = encodeURIComponent(`Please add this user to the waitlist:\n\nEmail: ${email}\nSource: Healthcare Discovery waitlist`);
+    window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+
     setIsSubmitted(true);
     setTimeout(() => setIsSubmitted(false), 3000);
   };
+
 
   return (
     <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
@@ -19,10 +27,6 @@ export const HeroSection = () => {
       <img src={heroImage} alt="" />
       </div>
       
-      {/* Animated Orbs */}
-      {/* <div className="absolute top-20 left-10 w-72 h-72 bg-blue-400/20 rounded-full blur-3xl animate-float"></div>
-      <div className="absolute bottom-20 right-10 w-96 h-96 bg-cyan-400/20 rounded-full blur-3xl animate-float-delayed"></div>
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-teal-400/10 rounded-full blur-3xl animate-pulse-slow"></div> */}
 
       <div className="container mx-auto relative z-10">
         <div className="max-w-4xl mx-auto text-center">

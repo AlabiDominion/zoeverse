@@ -3,7 +3,6 @@ import { HeroSection } from "./components/hero-section";
 import { ProblemSolutionSection } from "./components/problem-solution-section";
 import { FeaturesSection } from "./components/features-section";
 import { HowItWorksSection } from "./components/how-it-works-section";
-import { TestimonialsSection } from "./components/testimonials-section";
 import { CTASection } from "./components/cta-section";
 import { Footer } from "./components/footer-section";
 import './index.css'
@@ -18,7 +17,6 @@ function App() {
       <ProblemSolutionSection />
       <FeaturesSection />
       <HowItWorksSection />
-      <TestimonialsSection />
       <CTASection />
       <Footer /> 
     </div>
